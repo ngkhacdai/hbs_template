@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <form action="/tinhtoan" method="POST">
+            <div class="row">
+                <input class=" col-sm-11 m-2" type="number" name="num1" value="{{{num1}}}" required />
+            </div>
+            <div class="row">
+                <input class=" col-sm-11 m-2" type="number" name="num2" required value="{{{num2}}}" />
+            </div>
+            <div class="row">
+                <input class="col-sm-1" type="radio" id="+" name="dau" value="+" checked />
+                <label class="col-sm-1">+</label>
+                <input class="col-sm-1" type="radio" id="-" name="dau" value="-" />
+                <label class="col-sm-1">-</label>
+                <input class="col-sm-1" type="radio" id="*" name="dau" value="*" />
+                <label class="col-sm-1">x</label>
+                <input class="col-sm-1" type="radio" id="/" name="dau" value="/" />
+                <label class="col-sm-1">/</label>
+            </div>
+            <div class="row">
+                <button class="col-sm-11 m-2 btn btn-primary" type="submit">Tính</button>
+            </div>
+        </form>
+        <div class="row" name="kq">
+            {{kq}}
+        </div>
+    </div>
+    <script>
+        const cong = document.getElementById('+');
+        const tru = document.getElementById('-');
+        const nhan = document.getElementById('*');
+        const chia = document.getElementById('/');
+        const dau = '{{{ dau }}}';
+        if (dau == '+') {
+            cong.checked = true;
+        } else if (dau == '-') {
+            tru.checked = true;
+        } else if (dau == '*') {
+            nhan.checked = true;
+        } else if (dau == '/') {
+            chia.checked = true;
+        }
+    </script>
+</body>
+
+</html>

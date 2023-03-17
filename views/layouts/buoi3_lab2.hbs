@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <form action="/tinhtoan" method="GET">
+            <div class="row">
+                <input class=" col-sm-11 m-2" type="number" name="num1" required />
+            </div>
+            <div class="row">
+                <input class=" col-sm-11 m-2" type="number" name="num2" required />
+            </div>
+            <div class="row">
+                <input class="col-sm-1" type="radio" name="dau" value="+" checked />
+                <label class="col-sm-1">+</label>
+                <input class="col-sm-1" type="radio" name="dau" value="-" />
+                <label class="col-sm-1">-</label>
+                <input class="col-sm-1" type="radio" name="dau" value="*" />
+                <label class="col-sm-1">x</label>
+                <input class="col-sm-1" type="radio" name="dau" value="/" />
+                <label class="col-sm-1">/</label>
+            </div>
+            <div class="row">
+                <button class="col-sm-11 m-2 btn btn-primary" type="submit">Tính</button>
+            </div>
+        </form>
+        <div class="row" name="kq">
+            {{{body}}}
+        </div>
+    </div>
+</body>
+
+</html>
